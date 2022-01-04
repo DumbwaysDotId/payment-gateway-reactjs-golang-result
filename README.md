@@ -12,9 +12,9 @@
 
 - Install Localtunnel globally to make it accessible anywhere :
 
-```test
-  npm install -g localtunnel
-```
+  ```test
+    npm install -g localtunnel
+  ```
 
 * Run localtunnel with port `3000` for client side :
 
