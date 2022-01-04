@@ -10,7 +10,7 @@
 
 - Open new terminal
 
-- Install Localtunnel globally to make it accessible anywhere :
+- Install [Localtunnel](https://localtunnel.github.io/www/) globally to make it accessible anywhere :
 
   ```test
     npm install -g localtunnel
