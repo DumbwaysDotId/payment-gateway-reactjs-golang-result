@@ -8,20 +8,24 @@
 
 - Run application `npm run dev` on server side
 
-- Download [ngrok](https://ngrok.com/) and place it in the payment-gateway or project folder
+- Open new terminal
 
-- Open terminal
+- Install Localtunnel globally to make it accessible anywhere :
 
-* Run ngrok with port `3000` for client side :
+```test
+  npm install -g localtunnel
+```
+
+* Run localtunnel with port `3000` for client side :
 
   ```text
-    ./ngrok http 3000
+    lt --port 3000
   ```
 
-* Run ngrok with port `5000` for server side :
+* Run localtunnel with port `5000` for server side :
 
   ```text
-    ./ngrok http 5000
+    lt --port 5000
   ```
 
 #### Configuration on midtrans
