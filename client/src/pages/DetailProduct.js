@@ -34,7 +34,7 @@ export default function DetailProduct() {
     //change this to the script source you want to load, for example this is snap.js sandbox env
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
     //change this according to your client-key
-    const myMidtransClientKey = "Client key here ...";
+    const myMidtransClientKey = "SB-Mid-client-YUogx3u74Gq9MTMS";
 
     let scriptTag = document.createElement("script");
     scriptTag.src = midtransScriptUrl;
@@ -52,8 +52,8 @@ export default function DetailProduct() {
     try {
       // Get data from product
       const data = {
-        idProduct: product.id,
-        idSeller: product.user.id,
+        productId: product.id,
+        sellerId: product.user.id,
         price: product.price,
       };
 
@@ -72,8 +72,8 @@ export default function DetailProduct() {
 
       // Insert transaction data
       const response = await api.post("/transaction", config);
-
-      const token = response.payment.token;
+      console.log(response);
+      const token = response.data.token;
 
       window.snap.pay(token, {
         onSuccess: function (result) {
